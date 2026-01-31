@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Check if gateway is already running
+if pgrep -f "openclaw.*gateway" > /dev/null; then
+    echo "⚠️  OpenClaw Gateway is already running"
+else
+    echo ""
+    echo "╔══════════════════════════════════════════════════════════════╗"
+    echo "║                                                              ║"
+    echo "║                🦞 OpenClaw Development                       ║"
+    echo "║                                                              ║"
+    echo "╚══════════════════════════════════════════════════════════════╝"
+    echo ""
+    echo "📋 Quick Commands:"
+    echo "   pnpm openclaw gateway --verbose     # Start gateway"
+    echo "   pnpm openclaw gateway --help        # Gateway options"
+    echo "   pnpm test                           # Run tests"
+    echo "   pnpm build                          # Build project"
+    echo "   pnpm lint                           # Run linter"
+    echo "   pnpm ui:dev                         # Start UI dev server"
+    echo ""
+    echo "🔌 Port Forwarding:"
+    echo "   18789 - OpenClaw Gateway (WebSocket)"
+    echo "   18790 - Canvas Host"
+    echo "   18791 - Node Host"
+    echo "   18792 - Browser Relay"
+    echo "   5173  - UI Dev Server"
+    echo ""
+    echo "⚙️  Configuration:"
+    echo "   Location: ${OPENCLAW_STATE_DIR}/openclaw.json"
+    echo "   Workspace: ${OPENCLAW_WORKSPACE_DIR}"
+    echo ""
+    echo "🚀 Getting Started:"
+    echo "   1. Set API keys in GitHub Codespaces Secrets:"
+    echo "      https://github.com/settings/codespaces"
+    echo "   2. Run: pnpm openclaw gateway --verbose"
+    echo "   3. Access via the forwarded HTTPS URL"
+    echo "   4. Connect your Android app using the forwarded URL"
+    echo ""
+    echo "�� Documentation: https://docs.openclaw.ai"
+    echo ""
+fi

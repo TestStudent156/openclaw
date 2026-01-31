@@ -18,6 +18,25 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
 </p>
 
+## 🚀 Quick Start with GitHub Codespaces
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/TestStudent156/openclaw?devcontainer_path=.devcontainer/devcontainer.json)
+
+**One-click development environment with:**
+- ✅ Pre-configured Node.js 22 + pnpm
+- ✅ Auto-built OpenClaw Gateway
+- ✅ Port forwarding for Android connectivity
+- ✅ Persistent state storage
+- ✅ VS Code extensions ready
+
+**After opening Codespaces:**
+1. Set API keys in [GitHub Codespaces Secrets](https://github.com/settings/codespaces): `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`
+2. Run: `pnpm openclaw gateway --verbose`
+3. Access via forwarded HTTPS URL (port 18789)
+4. Connect Android app using the forwarded URL
+
+---
+
 **OpenClaw** is a _personal AI assistant_ you run on your own devices.
 It answers you on the channels you already use (WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, WebChat), plus extension channels like BlueBubbles, Matrix, Zalo, and Zalo Personal. It can speak and listen on macOS/iOS/Android, and can render a live Canvas you control. The Gateway is just the control plane — the product is the assistant.
 
