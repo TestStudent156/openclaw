@@ -15,10 +15,11 @@
     "OPENCLAW_WORKSPACE_DIR": "/workspaces/openclaw/.openclaw-state/workspace",
     "NODE_ENV": "development",
     "OPENCLAW_DOCKER_ENV": "1",
-    "CODESPACES": "true"
+    "CODESPACES": "true",
+    "OLLAMA_HOST": "127.0.0.1:11434"
   },
 
-  "forwardPorts": [18789, 18790, 18791, 18792, 5173],
+  "forwardPorts": [18789, 18790, 18791, 18792, 5173, 11434],
 
   "portsAttributes": {
     "18789": {
@@ -39,6 +40,10 @@
     },
     "5173": {
       "label": "UI Development Server"
+    },
+    "11434": {
+      "label": "Ollama API",
+      "onAutoForward": "silent"
     }
   },
 
