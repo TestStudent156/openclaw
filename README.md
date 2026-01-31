@@ -35,6 +35,39 @@
 3. Access via forwarded HTTPS URL (port 18789)
 4. Connect Android app using the forwarded URL
 
+## 🦙 Local Models with Ollama (No API Keys Required!)
+
+**Don't have API keys?** OpenClaw Codespaces automatically sets up **Ollama** for running AI models locally:
+
+1. **Open in Codespaces** - Ollama installs automatically
+2. **Start the gateway**: `pnpm openclaw gateway --verbose`
+3. **Done!** Uses `llama3.2` by default (~2GB, fast)
+
+### Switch Models
+
+```bash
+# See available models
+bash scripts/ollama-manage.sh recommended
+
+# Download a better model
+bash scripts/ollama-manage.sh pull mistral:7b
+
+# Switch to it
+bash scripts/ollama-manage.sh switch mistral:7b
+
+# Restart gateway
+pnpm openclaw gateway --verbose
+```
+
+### When to Use Cloud vs Local
+
+| Scenario | Recommendation |
+|----------|----------------|
+| Testing/Development | 🦙 **Ollama** (free, private) |
+| Production/Quality | ☁️ **Claude/GPT** (better responses) |
+| Limited Internet | 🦙 **Ollama** (runs offline) |
+| Cost-sensitive | 🦙 **Ollama** (completely free) |
+
 ---
 
 **OpenClaw** is a _personal AI assistant_ you run on your own devices.
